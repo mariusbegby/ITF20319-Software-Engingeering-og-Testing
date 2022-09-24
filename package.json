@@ -1,0 +1,23 @@
+{
+  "name": "itf20319-software-engingeering-og-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariusbegby/ITF20319-Software-Engingeering-og-Testing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariusbegby/ITF20319-Software-Engingeering-og-Testing/issues"
+  },
+  "homepage": "https://github.com/mariusbegby/ITF20319-Software-Engingeering-og-Testing#readme",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  }
+}
