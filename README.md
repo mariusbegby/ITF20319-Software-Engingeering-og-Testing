@@ -1,5 +1,13 @@
 # ITF20319-Software-Engingeering-og-Testing
 
+## Oppsett og kjøring av program
+
+Krever Node.js og npm installert. Testet på Node.js v14, v16 og v18.
+
+`npm ci` for å installere avhengiheter og pakker.
+
+`npm start` eller `node ./index.js` for å kjøre program. Du kan også spesifisere et år og sjekke mot, f.eks. ved `node ./index.js 2024`.
+
 ## Oblig 2 og 3
 
 Jeg lagde mappen `.github/workflows` hvor jeg skrev `node.js.yml`.
