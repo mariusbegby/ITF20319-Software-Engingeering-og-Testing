@@ -1,25 +1,25 @@
 # ITF20319-Software-Engingeering-og-Testing
 
-## Oppsett og kjøring av program
+## Prerequisites and getting started
 
-Krever Node.js og npm installert. Testet på Node.js v14, v16 og v18.
+Requires Node.js and npm installed. Tested on Node.js v14, v16 and v18.
 
-`npm ci` for å installere avhengiheter og pakker.
+`npm ci` to install dependencies and packages.
 
-`npm start` eller `node ./index.js` for å kjøre program. Du kan også spesifisere et år og sjekke mot, f.eks. ved `node ./index.js 2024`.
+`npm start` or `node ./index.js` to run the program. You can also specify a year to check, e.g. with `node ./index.js 2024`.
 
 ## Oblig 2 og 3
 
-Jeg lagde mappen `.github/workflows` hvor jeg skrev `node.js.yml`.
+I made the folder `.github/workflows` where I created `node.js.yml`.
 
-Det er satt opp Continuous Integration (CI) slik at hver gang noen pusher til main eller lager et PR til main, vil flyten kjøre.
+Continuous Integration (CI) is setup so that every time someone pushes to main branch or make a pull request to main, the workflow will run.
 
-Den vil gjøre alle `run:` kommandoene både på Node.js versjon 14, 16 og 18. Dette for å sikre bred kompabilitet og testdekning.
+The workflow will run all `run:` commands on Node.js version 14, 16 and 18. This is to ensure wide compatability and test coverage.
 
-Først i flyten vil `npm install -g npm` bli kjørt, for å sikre at videre `npm` kommandoer vil fungere.
+The first command will run `npm install -g npm`, to ensure that the following `npm` commands will work.
 
-Deretter vil `npm ci` installere avhengigheter og pakker fra `package-lock.json`. Dette er foretrukket ovenfor `npm install` som kan føre til en annerledes pakkestruktur, og ikke noe man burde kjøre i produksjonsmiljø. `npm ci` sikrer at man får helt lik pakkestruktur, og det er viktig at testene reflekterer det som skal ut i produksjonsmiljø.
+Then `npm ci` will install dependencies and packages from `package-lock.json`. This is chosen over `npm install`, which can lead to a different package structure, and that is not something we want in a production environment. `npm ci` will ensure that you get the same package structure, and it is important to ensure that the tests reflect the production environment as much as possible.
 
-Til slutt kjøres kommandoen `npm test` som egentlig bare er en alias definert i `package.json` for kommandoen `mocha`. Mocha vil da finne mappen `/test` og kjøre alle tester definert i filer i denne mappen.
+Lastly the command `npm test` will be run which is an alias for the command `mocha` defined in `package.json`. Mocha will then find the folder `/test` and run all tests specified in the folder
 
-Dersom noen av testene skulle feile, på enten versjon 14, 16 eller 18 av Node.js, vil sjekkene feile i sin helhet.
+If some of the tests would fail, on either version 14, 16 or 18 of Node.js, then the checks will fail alltogether.
