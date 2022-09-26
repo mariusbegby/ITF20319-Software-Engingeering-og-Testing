@@ -8,7 +8,7 @@ Requires Node.js and npm installed. Tested on Node.js v14, v16 and v18.
 
 `npm start` or `node ./index.js` to run the program. You can also specify a year to check, e.g. with `node ./index.js 2024`.
 
-## Oblig 2 og 3
+## Oblig 2 and 3
 
 I made the folder `.github/workflows` where I created `node.js.yml`.
 
