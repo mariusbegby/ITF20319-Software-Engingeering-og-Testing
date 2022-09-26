@@ -1,6 +1,6 @@
 name: Node.js Continuous Integration
 
-# Vil kjøre både ved push til main branch eller pull request til main branch.
+# Will run on both push and pull rquest to main branch
 on:
   push:
     branches: ['main']
@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         node-version: [14.x, 16.x, 18.x]
-        # Kjører alle CI jobber under på versjon 14, 16 og 18 av Node.js
+        # Run all CI jobs on version 14, 16 og 18 of Node.js
 
     steps:
       - uses: actions/checkout@v3
@@ -23,6 +23,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - run: npm install -g npm # For å sikre at videre kommandoer fungerer
-      - run: npm ci # Installerer alle dependencies fra package-lock.json
-      - run: npm test # Kjører kommandoen spesifisert i npm test: 'mocha ./test/'
+      - run: npm install -g npm # To make sure npm command works on next commands
+      - run: npm ci # Install all dependencies from package-lock.json
+      - run: npm test # Run the command specified in npm test: 'mocha ./test/' which will run all tests
